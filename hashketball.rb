@@ -288,6 +288,8 @@ def player_with_longest_name
   longest_name = ""
   
   game_hash.each do |side, team_data|
-    
+    team_data.each do |team_attributes, attribute_values|
+      binding.pry
+    end
   end
 end
