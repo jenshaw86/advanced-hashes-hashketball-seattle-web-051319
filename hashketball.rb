@@ -309,6 +309,14 @@ def long_name_steals_a_ton?
   max_steals = 0
   
   game_hash.each do |side, team_data|
-    
+    team_data.each do |team_attribute, attribute_values|
+      if team_attribute == :players
+        attribute_values.each do |player, player_attributes|
+          player_attributes.each do |player_attribute, value|
+            if player_attribute == :steals
+          end
+        end
+      end
+    end
   end
 end
