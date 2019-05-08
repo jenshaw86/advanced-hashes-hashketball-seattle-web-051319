@@ -279,6 +279,7 @@ def winning_team
     if max_points > winning_points
       winning_points = max_points
       team_wins = game_hash[side][:team_name]
+    end
   end
   team_wins
 end
