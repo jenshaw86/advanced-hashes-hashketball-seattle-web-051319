@@ -261,7 +261,7 @@ end
 
 def winning_team
   team_wins = ""
-  
+  winning_points = 0
   
   game_hash.each do |side, team_data|
     max_points = 0
@@ -269,13 +269,15 @@ def winning_team
       if team_attributes == :players
         attribute_values.each do |player, player_attributes|
           player_attributes.each do |player_attribute, value|
-            if player_attribute == :points && value > max_points
-              max_points = value
-              best_shooter = player
+            if player_attribute == :points
+              max_points = max_points + value
             end
           end
         end
       end
     end
+    if max_points > winning_points
+      winning_points = max_points
+      team_wins = game_hash[side][:team_name]
   end
 end
