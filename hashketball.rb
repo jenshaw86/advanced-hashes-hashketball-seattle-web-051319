@@ -259,3 +259,23 @@ def most_points_scored
   best_shooter
 end
 
+def winning_team
+  team_wins = ""
+  
+  
+  game_hash.each do |side, team_data|
+    max_points = 0
+    team_data.each do |team_attributes, attribute_values|
+      if team_attributes == :players
+        attribute_values.each do |player, player_attributes|
+          player_attributes.each do |player_attribute, value|
+            if player_attribute == :points && value > max_points
+              max_points = value
+              best_shooter = player
+            end
+          end
+        end
+      end
+    end
+  end
+end
