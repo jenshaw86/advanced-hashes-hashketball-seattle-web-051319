@@ -305,5 +305,10 @@ end
 
 def long_name_steals_a_ton?
   had_most_steals = ""
+  has_longest_name = player_with_longest_name
   max_steals = 0
+  
+  game_hash.each do |side, team_data|
+    
+  end
 end
