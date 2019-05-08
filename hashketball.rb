@@ -258,24 +258,3 @@ def most_points_scored
   end
   best_shooter
 end
-
-# def winning_team
-#   most_points = 0
-#   winning_team = ""
-  
-#   game_hash.each do |side, team_data|
-#     binding.pry
-#     team_points = 0
-#     team_data.each do |team_attributes, attribute_values|
-#       if team_attributes = :players
-#         attribute_values.each do |player, player_attributes|
-#           player_attributes.each do |player_attribute, value|
-#             if player_attribute == :points
-#               if game_hash[side]
-#             end
-#           end
-#         end
-#       end
-#     end
-#   end
-# end
