@@ -289,7 +289,7 @@ def player_with_longest_name
   
   game_hash.each do |side, team_data|
     team_data.each do |team_attribute, attribute_values|
-      if team_attribute = :players
+      if team_attribute == :players
         binding.pry
           
       end
