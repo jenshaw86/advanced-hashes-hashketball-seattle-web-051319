@@ -313,7 +313,10 @@ def long_name_steals_a_ton?
       if team_attribute == :players
         attribute_values.each do |player, player_attributes|
           player_attributes.each do |player_attribute, value|
-            if player_attribute == :steals
+            if player_attribute == :steals && value > max_steals
+              max_steals = value
+              had_most_steals = player
+            end
           end
         end
       end
