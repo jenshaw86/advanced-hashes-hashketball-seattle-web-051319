@@ -292,7 +292,8 @@ def player_with_longest_name
     team_data.each do |team_attribute, attribute_values|
       if team_attribute == :players
         attribute_values.each do |player, player_attributes|
-          player.length
+          if player.length > longest_char_count
+            longest_char_count = player.length
         end
       end
     end
